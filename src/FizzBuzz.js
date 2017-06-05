@@ -23,7 +23,11 @@ FizzBuzz.prototype._isNotDivisibleBy = function(divisor_1, divisor_2, number) {
   return number % divisor_1 != 0 && number % divisor_2 != 0
 }
 
-for (i = 1; i <=1000; i++) {
-  fizzBuzz = new FizzBuzz()
-  console.log(fizzBuzz.play(i))
+var formFizzBuzz = document.getElementById("form");
+
+formFizzBuzz.onsubmit = function(evt){
+  evt.preventDefault();
+  var fizzBuzz = new FizzBuzz()
+  alert(fizzBuzz.play(document.getElementById("number").value));
 }
+    
