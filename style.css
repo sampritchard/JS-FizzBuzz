@@ -1,0 +1,9 @@
+body {
+  background-color: lightblue;
+}
+
+h1, form {
+  text-align: center;
+  color: #ea503f;
+  font-family: courier;
+}
