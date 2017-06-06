@@ -35,6 +35,6 @@ formFizzBuzz.onsubmit = function(evt){
   if (number.match(/\d+/g)) {
     document.getElementById("output").innerHTML = fizzBuzz.play(number);
   } else {
-      document.getElementById("output").innerHTML = "Please enter a number";
+    document.getElementById("output").innerHTML = "Please enter a number";
   }
 }
