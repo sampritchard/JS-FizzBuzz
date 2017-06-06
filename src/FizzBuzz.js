@@ -3,6 +3,9 @@ function FizzBuzz() {
 
 FizzBuzz.prototype.play = function(number) {
   var output = "";
+  if (number == 0) {
+    return "Please enter a number other than 0";
+  }
   if (this._isDivisibleBy(3, number)) {
     output += "Fizz"
   }
@@ -28,5 +31,10 @@ var formFizzBuzz = document.getElementById("form");
 formFizzBuzz.onsubmit = function(evt){
   evt.preventDefault();
   var fizzBuzz = new FizzBuzz()
-  document.getElementById("output").innerHTML = fizzBuzz.play(document.getElementById("number").value);
+  var number = document.getElementById("number").value;
+  if (number.match(/\d+/g)) {
+    document.getElementById("output").innerHTML = fizzBuzz.play(number);
+  } else {
+      document.getElementById("output").innerHTML = "Please enter a number";
+  }
 }
