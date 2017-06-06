@@ -28,6 +28,5 @@ var formFizzBuzz = document.getElementById("form");
 formFizzBuzz.onsubmit = function(evt){
   evt.preventDefault();
   var fizzBuzz = new FizzBuzz()
-  alert(fizzBuzz.play(document.getElementById("number").value));
+  document.getElementById("output").innerHTML = fizzBuzz.play(document.getElementById("number").value);
 }
-    

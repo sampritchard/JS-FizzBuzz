@@ -7,3 +7,10 @@ h1, form {
   color: #ea503f;
   font-family: courier;
 }
+
+p {
+  text-align: center;
+  color: #ea503f;
+  font-family: courier;
+  font-size: 50px
+}
